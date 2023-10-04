@@ -49,6 +49,13 @@ function getApi(tmdbURL) {
       });
 }
 
+let genreButton = document.querySelector('#genreButton');
+genreButton.addEventListener('click',
+    function(e) {
+        let genreDropdown = document.querySelector('#genreDropdown')
+        genreDropdown.classList.toggle('is-active');
+});
+
 startButton.addEventListener('click', function(e) {
     event.preventDefault();
     letsBegin = startButton.value;

@@ -22,25 +22,25 @@
 
         <main>
             <section class="main-page">
-                <div>
-                    <button id="search-bar">Search i.e horror, comedy, etc.</button>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Category Bar</button>
-                        <form action="" class="genres">
-                            <label for="genre-1">Genre</label>
-                            <input type="checkbox" id="genre-1" value="genre">
-                            <label for="genre-2">Genre</label>
-                            <input type="checkbox" id="genre-2" value="genre">
-                            <label for="genre-3">Genre</label>
-                            <input type="checkbox" id="genre-3" value="genre">
-                            <label for="genre-4">Genre</label>
-                            <input type="checkbox" id="genre-4" value="genre">
-                            <label for="genre-5">Genre</label>
-                            <input type="checkbox" id="genre-5" value="genre">
-                            <label for="genre-6">Genre</label>
-                            <input type="checkbox" id="genre-6" value="genre">
+
+                <div id = "genreDropdown" class="dropdown">
+                    <div class="dropdown-trigger">
+                      <button id = "genreButton" class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
+                        <span>Search i.e horror, comedy, etc.</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
                     </div>
-                </div>
+                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          genre
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                 <div class="top-10">
                     <h2>Top 10 of Category</h2>
                     <div id="posters"></div>

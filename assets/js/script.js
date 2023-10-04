@@ -1,7 +1,8 @@
+let startButton = document.querySelector('#start');
 var omdbApiKey = "45d7bdd6";
 var tmdbApiKey = "96e06e8f584c29c1ea0c1fe465d02637";
-let startButton = document.querySelector('#start');
 var letsBegin;
+
 
 startButton.addEventListener('click', function(e) {
     event.preventDefault();

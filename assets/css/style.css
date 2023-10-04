@@ -1,0 +1,24 @@
+:root {
+    --dark: rgb(39, 37, 37); 
+    --vibrant: rgb(243, 80, 16); 
+    --bright: rgb(245, 243, 243); 
+}
+
+body {
+    
+}
+header {
+    background-color: black;
+}
+#title {
+    padding: 20px;
+    text-align: center;
+    color: var(--vibrant);
+}
+
+.navbar {
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 500px 0 500px;
+}
+

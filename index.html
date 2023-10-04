@@ -10,60 +10,34 @@
     </head>
     <body>
         <header>
-            <h1 id="title">Title Here</h1>
-            <nav class="nav-bar">
-                <ul id="nav-links">
-                    <li>About</li>
-                    <li>Movies</li>
-                    <li>Favorites</li>
-                </ul>
+            <h1 class="title is-1" id="title">Title Here</h1>
+            <nav class="navbar-center is-white" role="navigation" aria-label="main navigation">
+                <div id="nav-links" class="navbar-menu">
+                    <div class="navbar" >
+                      <a class="navbar-item ">
+                        About
+                      </a>
+                
+                      <a class="navbar-item">
+                        Movies
+                      </a>
+                
+                      <a class="navbar-item">
+                        Favorites
+                      </a>
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
             <div class="opening-page">
-                <h1 id="about">About Project</h1>
+                <h1 class="subtitle is-3">ABOUT PROJECT</h1>
                 <p class="intro" id="line-1">Find top movie reccomendation based on game</p>
                 <p class="intro" id="line-2">Save what you want to see, delete what you don't for a new<br>recommendation, or search movies based on title yourself</br></p>
                 <p class="intro" id="line-3">Click below to start your search!!!</p>
-                <button id="start">Click Here to Start Searching</button>
+                <button class="button is-medium is-hovered is-hovered is-dark" id="start">Click Here to Start Searching</button>
             </div>
-            <section class="main-page">
-                <div>
-                    <button id="search-bar">Search i.e horror, comedy, etc.</button>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Category Bar</button>
-                        <form action="" class="genres">
-                            <label for="genre-1">Genre</label>
-                            <input type="checkbox" id="genre-1" value="genre">
-                            <label for="genre-2">Genre</label>
-                            <input type="checkbox" id="genre-2" value="genre">
-                            <label for="genre-3">Genre</label>
-                            <input type="checkbox" id="genre-3" value="genre">
-                            <label for="genre-4">Genre</label>
-                            <input type="checkbox" id="genre-4" value="genre">
-                            <label for="genre-5">Genre</label>
-                            <input type="checkbox" id="genre-5" value="genre">
-                            <label for="genre-6">Genre</label>
-                            <input type="checkbox" id="genre-6" value="genre">
-                    </div>
-                </div>
-                <div class="top-10">
-                    <h2>Top 10 of Category</h2>
-                    <div id="posters"></div>
-                </div>
-                <aside>
-                    <div id="ad-1"></div>
-                </aside>
-            </section>
-            <section class="favorites-page">
-                <aside>
-                    <div id="ad-2"></div>
-                    <div id="favorited">
-                        <h2>Favorited Movies</h2>
-                        <div id="fav-posters"></div>
-                    </div>
-                </aside>
-            </section>
+           
         </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>

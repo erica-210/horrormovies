@@ -1,4 +1,4 @@
-let startButton = document.querySelector('#startButton');
+let startButton = document.querySelector('#start');
 
 startButton.addEventListener('click', function(e) {
 });

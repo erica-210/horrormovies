@@ -11,13 +11,34 @@ header {
     background-color: black;
 }
 #title {
-    padding: 20px;
+    padding: 20px 0 0 0;
     text-align: center;
     color: var(--vibrant);
 }
 
+#title-2 {
+    text-align: center;
+}
 .navbar {
     flex-grow: 1;
     justify-content: center;
+    background-color: black;
 }
 
+.navbar-item{
+    padding: 0 20px 0 20px;
+    background-color: white;
+    color: var(--vibrant);
+}
+.opening-page {
+    margin: 40px;
+    text-align: center;
+}
+
+.intro {
+    padding: 10px;
+}
+
+#start {
+    margin: 20px;
+}

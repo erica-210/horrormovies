@@ -3,6 +3,7 @@ var omdbApiKey = "45d7bdd6";
 var tmdbApiKey = "96e06e8f584c29c1ea0c1fe465d02637";
 var letsBegin;
 
+$(document).ready(function () {
 function getApi(omdbURL) {
   fetch(omdbURL, {
     method: "GET",
@@ -49,6 +50,7 @@ function getApi(tmdbURL) {
 
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {
+  event.preventDefault();
   let genreDropdown = document.querySelector("#genreDropdown");
   genreDropdown.classList.toggle("is-active");
 });
@@ -56,6 +58,7 @@ genreButton.addEventListener("click", function (e) {
 var favoritedButton = document.querySelector("#favorites");
 var favoritedSection = document.querySelector("#favorited");
 favoritedButton.addEventListener("click", function pullFavorites(e) {
+  event.preventDefault();
   var favoritesTitle = document.createElement("h1");
   var toBeWatched = document.createElement("div");
   favoritesTitle.textContent = "Favorited Movies";
@@ -77,5 +80,7 @@ startButton.addEventListener("click", function (e) {
     "https://api.themoviedb.org/3/movie/550?api_key=96e06e8f584c29c1ea0c1fe465d02637";
   getApi(omdbURL);
   getApi(tmbdURL);
+  
   console.log("The clicker, clicks");
 });
+})

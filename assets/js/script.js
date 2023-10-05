@@ -56,12 +56,21 @@ genreButton.addEventListener('click',
         genreDropdown.classList.toggle('is-active');
 });
 
-let favoritedButton = document.querySelector('#favorites');
-favoritedButton.addEventListener('click',
-    function(e) {
-        let favoritedSection= document.querySelector('#favorited');
-        
-});
+var favoritedButton = document.querySelector("#favorites");
+var favoritedSection = document.querySelector("#favorited");
+favoritedButton.addEventListener("click", function pullFavorites(e) {
+  var favoritesTitle = document.createElement("h1");
+  var toBeWatched = document.createElement("div");
+  favoritesTitle.textContent = "Favorited Movies";
+  //toBeWatched.textContent = needs data input inconnection with favorited function
+  favoritedSection.append(favoritesTitle);
+  favoritedSection.append(toBeWatched);
+
+  favoritesTitle.setAttribute(
+    "style",
+    "font-size:40px; text-align:center; outline: 2px solid rgb(243, 80, 16); padding:5px;"
+  );
+},{once : true});
 
 startButton.addEventListener('click', function(e) {
     event.preventDefault();

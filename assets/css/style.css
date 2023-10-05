@@ -1,12 +1,8 @@
 :root {
     --dark: rgb(39, 37, 37); 
     --vibrant: rgb(243, 80, 16); 
-    --bright: rgb(245, 243, 243); 
 }
 
-body {
-    
-}
 header {
     background-color: black;
 }
@@ -31,7 +27,7 @@ header {
     color: var(--vibrant);
 }
 .opening-page {
-    margin: 40px;
+    margin: 70px;
     text-align: center;
 }
 
@@ -41,4 +37,49 @@ header {
 
 #start {
     margin: 20px;
+}
+
+#search-container {
+    margin: 40px;
+}
+
+.box {
+    margin-bottom: 40px;
+    width: 400px;
+}
+
+#genreButton{
+   width: 400px;
+   color: var(--vibrant);
+}
+
+.dropdown-menu {
+    width: 400px;
+}
+
+#favorites {
+    margin-top: 400px;
+    width: 400px;
+}
+
+.category-container {
+    margin: 40px;
+    text-align: center;
+    outline: 2px solid var(--vibrant);
+}
+
+.description {
+     padding: 5px;
+}
+
+footer {
+    margin: 200px;
+}
+
+#team4  li a{
+    color: var(--vibrant);
+}
+
+#repo a {
+    color: var(--vibrant);
 }

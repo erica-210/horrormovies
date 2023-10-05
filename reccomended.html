@@ -4,29 +4,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Placeholder</title>
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+        <title>Recommeded-Movies To Watch During Spooky Season</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+      </head>
+
     <body>
-        <header>
-            <h1 id="title">Title Here</h1>
-            <nav class="nav-bar">
-                <ul id="nav-links">
-                    <li>About</li>
-                    <li>Movies</li>
-                    <li>Favorites</li>
-                </ul>
-            </nav>
-        </header>
+      <header>
+        <h1 class="title is-1" id="title">Movies To Watch</h1>
+        <h3 class="title is-4" id="title-2">For A Ghoul's Bestfriend</h3>
+        <nav class="navbar-center" role="navigation" aria-label="main navigation">
+            <div id="nav-links" class="navbar-menu">
+                <div class="navbar">
+                  <a class="navbar-item ">
+                    About
+                  </a>
+            
+                  <a class="navbar-item">
+                    Movies
+                  </a>
+            
+                  <a class="navbar-item">
+                    Favorites
+                  </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
         <main>
-            <section class="main-page">
+            <section class="columns">
 
-                <div id = "genreDropdown" class="dropdown">
-                    <div class="dropdown-trigger">
+                <div class="column is-3" id="search-container">
+                    <div>
+                      <form class="box">
+                        <div class="field">
+                          <div class="control">
+                            <input class="input is-danger" type="search" placeholder="Search Bar...">
+                          </div>
+                        </div>
+                    </div>
+                    <div id = "genreDropdown" class="dropdown">
+                    <div class="dropdown-trigger" id="categories">
                       <button id = "genreButton" class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
-                        <span>Search i.e horror, comedy, etc.</span>
+                        <span>Category Bar</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </span>
@@ -39,17 +60,47 @@
                         </a>
                       </div>
                     </div>
-                  </div>
-
-                <div class="top-10">
-                    <h2>Top 10 of Category</h2>
-                    <div id="posters"></div>
+                    </div>
+                    <div id="favorites-button">
+                      <button class="button is-medium is-hovered is-hovered is-dark" id="favorites">Favorites</button>
+                    </div>
                 </div>
-                <aside>
-                    <div id="ad-1"></div>
+
+                <div class="column is-7">
+                  <div class="category-container">
+                    <h2 class="content block description">Pick a genre from the category bar, search a movie yourself or look up your saved in the favorites tab.</h2>
+                    <div id="posters"></div>
+                 </div>
+                 <div class="favorites-page">
+                  <div>
+                    <div id="ad-2"></div>
+                    <div id="favorited">
+                        <h2 id="favorites-title"></h2>
+                        <div id="fav-posters"></div>
+                    </div>
+                  </div>
+                 </div>
+                </div>
+
+                <aside class="column is-2">
+                    <div id="ad-1">AD</div>
                 </aside>
             </section>
         </main>
+
+        <footer class="footer content">
+          <div id="githubs" class="has-text-centered breadcrumb is-centered" aria-label="breadcrumbs" >
+          <ul id="team4">
+            <li><a href="https://github.com/RobbieBet">Robert B</a></li>
+            <li><a href="https://github.com/SHoang6702">Sebastian Hoang</a></li>
+            <li><a href="https://github.com/erica-210">Erica San Miguel</a></li>
+          </ul>
+          </div>
+          <div id="repo" class="has-text-centered is-centered" aria-label="breadcrumbs">
+            <a href="#">Project Repo</a>
+          </div>
+        </footer>
+        
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
     </body>

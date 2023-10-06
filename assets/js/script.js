@@ -49,15 +49,29 @@ function getApi(tmdbURL) {
     });
 }
 
-//function connectApi (e) {
-  //var omdbURL = "https://www.omdbapi.com/?i=tt3896198&apikey=45d7bdd6";
-  //var tmbdURL =
-    //"https://api.themoviedb.org/3/movie/550?api_key=96e06e8f584c29c1ea0c1fe465d02637";
-  //getApi(omdbURL);
- // getApi(tmbdURL);
-//}
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYWNjZTAzMWM0OWMxMzc0MmQ5MjEyMmNkZmY4OWI3MiIsInN1YiI6IjY1MWI1ZWE0NjcyOGE4MDEwMTI1OWZkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5UaB11c8215CparwWnxT4DdINyKaTi_yzgv4JI4mhFQ'
+  }
+};
 
-//connectApi();
+fetch('https://api.themoviedb.org/3/movie/changes?page=1', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+function connectApi (e) {
+  var omdbURL = "https://www.omdbapi.com/?i=tt3896198&apikey=45d7bdd6";
+  var tmbdURL =
+    "https://api.themoviedb.org/3/movie/550?api_key=96e06e8f584c29c1ea0c1fe465d02637";
+  getApi(omdbURL);
+  getApi(tmbdURL);
+}
+
+connectApi();
 
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {

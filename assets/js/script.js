@@ -19,6 +19,7 @@ function getApi(omdbURL) {
 
     .then(function (data) {
       console.log(data);
+
     })
 
     .catch(function (error) {
@@ -63,6 +64,9 @@ genreButton.addEventListener("click", function (e) {
   event.preventDefault();
   let genreDropdown = document.querySelector("#genreDropdown");
   genreDropdown.classList.toggle("is-active");
+
+
+  
 });
 
 var favoritedButton = document.querySelector("#favorites");

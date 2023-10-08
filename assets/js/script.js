@@ -1,31 +1,37 @@
 let startButton = document.querySelector("#start");
+
 var omdbApiKey = "45d7bdd6";
-var tmdbApiKey = "96e06e8f584c29c1ea0c1fe465d02637";
+var tmdbApiKey = "api_key=96e06e8f584c29c1ea0c1fe465d02637";
+var baseURL = "https://api.themoviedb.org/3";
+var byPopularity =  "/discover/movie?sort_by=popularity.desc&";
+var IMG_URL = "https://image.tmdb.org/t/p/w500";
+var main = document.getElementById('movie-container');
+
 var letsBegin;
 
 $(document).ready(function () {
-function getApi(omdbURL) {
-  fetch(omdbURL, {
-    method: "GET",
-  })
-    .then(function (response) {
-      if (response.ok) {
-        console.log(response);
-      } else {
-        console.log(status);
-      }
-      return response.json();
-    })
+//function getApi(omdbURL) {
+  //fetch(omdbURL, {
+  //  method: "GET",
+ // })
+  //  .then(function (response) {
+   //   if (response.ok) {
+   //     console.log(response);
+   //   } else {
+    //    console.log(status);
+    //  }
+     // return response.json();
+   // })
 
-    .then(function (data) {
-      console.log(data);
+    //.then(function (data) {
+    //  console.log(data);
 
-    })
+    //})
 
-    .catch(function (error) {
-      alert("ERROR");
-    });
-}
+    //.catch(function (error) {
+     // alert("ERROR");
+    //});
+//}
 
 function getApi(tmdbURL) {
   fetch(tmdbURL, {
@@ -33,7 +39,7 @@ function getApi(tmdbURL) {
   })
     .then(function (response) {
       if (response.ok) {
-        console.log(response);
+        //console.log(response);
       } else {
         console.log(status);
       }
@@ -41,7 +47,8 @@ function getApi(tmdbURL) {
     })
 
     .then(function (data) {
-      console.log(data);
+      console.log(data.results);
+      reccommendedMovies(data.results);
     })
 
     .catch(function (error) {
@@ -60,18 +67,46 @@ const options = {
 fetch('https://api.themoviedb.org/3/movie/changes?page=1', options)
   .then(response => response.json())
   .then(response => console.log(response))
+  
   .catch(err => console.error(err));
 
 
 function connectApi (e) {
-  var omdbURL = "https://www.omdbapi.com/?i=tt3896198&apikey=45d7bdd6";
+  //var omdbURL = "https://www.omdbapi.com/?i=tt3896198&apikey=45d7bdd6";
   var tmbdURL =
-    "https://api.themoviedb.org/3/movie/550?api_key=96e06e8f584c29c1ea0c1fe465d02637";
-  getApi(omdbURL);
+    baseURL + byPopularity + tmdbApiKey;
+ // getApi(omdbURL);
   getApi(tmbdURL);
 }
 
 connectApi();
+
+function reccommendedMovies(data) {
+  main.innerHTML = '';
+
+  data.forEach(movie => {
+    var {title, poster_path, release_date, vote_average} = movie
+    var movieE1 = document.createElement('div');
+    movieE1.classList.add('movie');
+    movieE1.innerHTML= 
+    `
+    <img src="${IMG_URL + poster_path}" alt="${title}">
+    
+   <div class="movie-info">
+     <h3>${title}</h3>
+     <span class="year">${release_date}</span>
+     <span class="rating">${vote_average}</span>
+    </div>
+
+    `
+
+    main.appendChild(movieE1);  
+  })
+  
+}
+
+var searchBar = document.querySelector('.input');
+
 
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {

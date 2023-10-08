@@ -83,3 +83,14 @@ footer {
 #repo a {
     color: var(--vibrant);
 }
+
+#subtitle {
+    padding: 10px;
+    margin: 40px;
+    text-align: center;
+    outline: 2px solid var(--vibrant);
+}
+
+#movie-info {
+    text-align: center;
+}

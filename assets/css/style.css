@@ -92,5 +92,26 @@ footer {
 }
 
 #movie-info {
+    justify-content: center;
+    font-size: 15px;
+}
+
+#movie-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    margin: 10px;
     text-align: center;
+    height: 400px;
+    width: 200px;
+}
+
+.rating {
+    color: var(--vibrant);
+}
+
+.movie h3 {
+    font-weight: bold;
 }

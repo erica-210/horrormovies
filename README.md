@@ -55,6 +55,8 @@ Pages used as refrences:
     MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
     JQuery: https://api.jquery.com/click/#click
+
+    icons: https://fontawesome.com/
     
 ## Features
 

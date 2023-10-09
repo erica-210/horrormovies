@@ -163,7 +163,7 @@ function getApi(tmdbURL) {
      action = genres.filter((id, index) => index === 10 || index === 0);
      actionHorror.setAttribute = action;
      $( "#action" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(action);
     } else {
       if(selectedGenre.includes(action)) {
@@ -183,7 +183,7 @@ function getApi(tmdbURL) {
      adventure = genres.filter((id, index) => index === 10 || index === 1);
      adventureHorror.setAttribute = adventure;
      $( "#adventure" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(adventure);
     } else {
       if(selectedGenre.includes(adventure)) {
@@ -203,7 +203,7 @@ function getApi(tmdbURL) {
      animation = genres.filter((id, index) => index === 10 || index === 2);
      animationHorror.setAttribute = animation;
      $( "#animation" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(animation);
     } else {
       if(selectedGenre.includes(animation)) {
@@ -223,7 +223,7 @@ function getApi(tmdbURL) {
      comedy = genres.filter((id, index) => index === 10 || index === 3);
      comedyHorror.setAttribute = comedy;
      $( "#comedy" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(comedy);
     } else {
       if(selectedGenre.includes(comedy)) {
@@ -243,7 +243,7 @@ function getApi(tmdbURL) {
      crime = genres.filter((id, index) => index === 10 || index === 4);
      crimeHorror.setAttribute = crime;
      $( "#crime" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(crime);
     } else {
       if(selectedGenre.includes(crime)) {
@@ -263,7 +263,7 @@ function getApi(tmdbURL) {
      documentary = genres.filter((id, index) => index === 10 || index === 5);
      docuHorror.setAttribute = documentary;
      $( "#docu" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(documentary);
     } else {
       if(selectedGenre.includes(documentary)) {
@@ -283,7 +283,7 @@ function getApi(tmdbURL) {
      drama = genres.filter((id, index) => index === 10 || index === 6);
      dramaHorror.setAttribute = drama;
      $( "#drama" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(drama);
     } else {
       if(selectedGenre.includes(drama)) {
@@ -303,7 +303,7 @@ function getApi(tmdbURL) {
      family = genres.filter((id, index) => index === 10 || index === 7);
      familyHorror.setAttribute = family;
      $( "#family" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(family);
     } else {
       if(selectedGenre.includes(family)) {
@@ -323,7 +323,7 @@ function getApi(tmdbURL) {
      fantasy = genres.filter((id, index) => index === 10 || index === 8);
      fantasyHorror.setAttribute = fantasy;
      $( "#fantasy" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(fantasy);
     } else {
       if(selectedGenre.includes(fantasy)) {
@@ -343,7 +343,7 @@ function getApi(tmdbURL) {
      historical= genres.filter((id, index) => index === 10 || index === 9);
      historyHorror.setAttribute = historical;
      $( "#history" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(historical);
     } else {
       if(selectedGenre.includes(historical)) {
@@ -363,7 +363,7 @@ function getApi(tmdbURL) {
      music = genres.filter((id, index) => index === 10 || index === 11);
      musicHorror.setAttribute = music;
      $( "#music" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(music);
     } else {
       if(selectedGenre.includes(music)) {
@@ -383,7 +383,7 @@ function getApi(tmdbURL) {
      mystery = genres.filter((id, index) => index === 10 || index === 12);
      mysteryHorror.setAttribute = mystery;
      $( "#mystery" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(mystery);
     } else {
       if(selectedGenre.includes(mystery)) {
@@ -403,7 +403,7 @@ function getApi(tmdbURL) {
      romance = genres.filter((id, index) => index === 10 || index === 13);
      romanceHorror.setAttribute = romance;
      $( "#romance" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(romance);
     } else {
       if(selectedGenre.includes(romance)) {
@@ -423,7 +423,7 @@ function getApi(tmdbURL) {
      science = genres.filter((id, index) => index === 10 || index === 14);
      scienceHorror.setAttribute = science;
      $( "#science" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(science);
     } else {
       if(selectedGenre.includes(science)) {
@@ -443,7 +443,7 @@ function getApi(tmdbURL) {
      tv = genres.filter((id, index) => index === 10 || index === 15);
      tvHorror.setAttribute = tv;
      $( "#tv" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(tv);
     } else {
       if(selectedGenre.includes(tv)) {
@@ -463,7 +463,7 @@ function getApi(tmdbURL) {
      thrill = genres.filter((id, index) => index === 10 || index === 16);
      thrillHorror.setAttribute = thrill;
      $( "#thrill" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(thrill);
     } else {
       if(selectedGenre.includes(thrill)) {
@@ -483,7 +483,7 @@ function getApi(tmdbURL) {
      war = genres.filter((id, index) => index === 10 || index === 17);
      warHorror.setAttribute = war;
      $( "#war" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(war);
     } else {
       if(selectedGenre.includes(war)) {
@@ -503,7 +503,7 @@ function getApi(tmdbURL) {
      western= genres.filter((id, index) => index === 10 || index === 18);
      westernHorror.setAttribute = western;
      $( "#western" ).on( "click", function() {
-      if(selectedGenre.length == 0){
+      if(selectedGenre.length >= 0){
         selectedGenre.push(western);
     } else {
       if(selectedGenre.includes(western)) {

@@ -156,6 +156,7 @@ function getApi(tmdbURL) {
 
   genreDefiner();
 
+  var selectedGenre = [];
   function genreDefiner() {
      action = genres.filter((id, index) => index === 10 || index === 0);
      actionHorror.setAttribute = action;
@@ -170,6 +171,7 @@ function getApi(tmdbURL) {
      animation = genres.filter((id, index) => index === 10 || index === 2);
      animationHorror.setAttribute = animation;
      $( "#animation" ).on( "click", function() {
+      
     } );
      comedy = genres.filter((id, index) => index === 10 || index === 3);
      comedyHorror.setAttribute = comedy;
@@ -230,13 +232,34 @@ function getApi(tmdbURL) {
      western= genres.filter((id, index) => index === 10 || index === 18);
      westernHorror.setAttribute = western;
      $( "#western" ).on( "click", function() {
-    } );
+      if(selectedGenre.length == 0){
+        selectedGenre.push(western);
+    } else {
+      if(selectedGenre.includes(western)) {
+        selectedGenre.filter((id, index) => {
+          if(western == genres.filter) {
+            selectedGenre.splice(index, 1);
+          }
+        })
+        } else {
+          selectedGenre.push(genre.filter);
+        }
+      }
+      console.log(selectedGenre)
+      getApi('https://api.themoviedb.org/3/discover/movie?api_key=96e06e8f584c29c1ea0c1fe465d02637&with_genres=27,37')
+    });
     console.log(war);
-    var byGenre = 'with_genres&';
-    //var tmbdURL =
-      //baseURL + byPopularity + byGenre + tmdbApiKey;
-   // getApi(omdbURL);
-    //getApi(tmbdURL);
+    var byGenre = '&with_genres=';
+    //genreDefiner.addEventListener('click', (e) => {
+      //event.preventDefault();
+      //var searchGenres = genres.value
+      
+     // if() {
+      //  getApi(baseURL + byGenre + searchGenres)
+      //} else {
+      //  getApi(tmbdURL);
+     // }
+    //})
   }
  
   function connectApi (e) {
@@ -249,8 +272,6 @@ function getApi(tmdbURL) {
 
 connectApi();
 
-
-// not styling properly. Need to look over. May be issue with bulma
 function reccommendedMovies(data) {
   
   main.innerHTML = '';
@@ -268,8 +289,20 @@ function reccommendedMovies(data) {
      <span class="year">${release_date}</span>
      <span class="rating">${vote_average}</span>
     </div>
+
+    <button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>
+    <button onclick="Toggle2()" id="trash" class="button"><i class="fa-solid fa-trash"></i></button>
     `
     main.appendChild(movieE1);  
+    
+    var heartBtn = document.getElementById('heart');
+    function Toggle1() {
+      if (`<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`) {
+        `<button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>`
+      } else {
+        `<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`
+      }
+    }
   })
   
 }

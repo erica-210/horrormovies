@@ -551,22 +551,22 @@ function reccommendedMovies(data) {
      <span class="rating">${vote_average}</span>
     </div>
 
-    <button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>
+    <button id="heart" class="button"><i class="fas fa-heart"></i></button>
     <button onclick="Toggle2()" id="trash" class="button"><i class="fa-solid fa-trash"></i></button>
     `
     main.appendChild(movieE1);  
-    
-    var heartBtn = document.getElementById('heart');
-    function Toggle1() {
-      if (`<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`) {
-        `<button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>`
-      } else {
-        `<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`
-      }
-    }
+   
   })
-  
+  var heartBtn = document.getElementById('heart');
+heartBtn.addEventListener('click', function() {
+  if (heartBtn.classList.contains("is-danger")) {
+    heartBtn.classList.remove("is-danger")
+  } else {
+    heartBtn.classList.add("is-danger")}
+});
 }
+
+
 
 var form = document.getElementById('form');
 var searchBar = document.getElementById('search');
@@ -591,8 +591,11 @@ genreButton.addEventListener("click", function (e) {
 
 var favoritedButton = document.querySelector("#favorites");
 var favoritedSection = document.querySelector("#favorited");
+var moviesToWatch = document.getElementById('subtitle');
+
 favoritedButton.addEventListener("click", function pullFavorites(e) {
   event.preventDefault();
+  moviesToWatch.removeChild
   var favoritesTitle = document.createElement("h1");
   var toBeWatched = document.createElement("div");
   favoritesTitle.textContent = "Favorited Movies";

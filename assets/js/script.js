@@ -551,19 +551,19 @@ function reccommendedMovies(data) {
      <span class="rating">${vote_average}</span>
     </div>
 
-    <button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>
+    <button id="heart" class="button"><i class="fas fa-heart"></i></button>
     <button onclick="Toggle2()" id="trash" class="button"><i class="fa-solid fa-trash"></i></button>
     `
     main.appendChild(movieE1);  
     
     var heartBtn = document.getElementById('heart');
-    function Toggle1() {
-      if (`<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`) {
-        `<button onclick="Toggle1()" id="heart" class="button"><i class="fas fa-heart"></i></button>`
+    heartBtn.addEventListener('click', function() {
+      if (heartBtn.classList.add("is-danger")) {
+        heartBtn.classList.remove("is-danger")
       } else {
-        `<button onclick="Toggle1()" id="heart" class="button is-danger"><i class="fas fa-heart"></i></button>`
+        heartBtn.classList.add("is-danger")
       }
-    }
+    });
   })
   
 }

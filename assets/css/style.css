@@ -58,7 +58,7 @@ header {
 }
 
 #favorites {
-    margin-top: 400px;
+    margin-top: 650px;
     width: 400px;
 }
 
@@ -110,6 +110,7 @@ footer {
 
 .rating {
     color: var(--vibrant);
+    font-weight: bold;
 }
 
 .movie h3 {

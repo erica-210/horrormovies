@@ -51,6 +51,10 @@ Pages used as refrences:
     Wireframe: https://wireframe.cc/
 
     OMDB Api: https://www.omdbapi.com/
+
+    MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+    JQuery: https://api.jquery.com/click/#click
     
 ## Features
 

@@ -33,13 +33,91 @@ $(document).ready(function () {
     //});
 //}
 
+var genres = [
+  {
+    "id": 28,
+    "name": "Action"
+    },
+    {
+    "id": 12,
+    "name": "Adventure"
+    },
+    {
+    "id": 16,
+    "name": "Animation"
+    },
+    {
+    "id": 35,
+    "name": "Comedy"
+    },
+    {
+    "id": 80,
+    "name": "Crime"
+    },
+    {
+    "id": 99,
+    "name": "Documentary"
+    },
+    {
+    "id": 18,
+    "name": "Drama"
+    },
+    {
+    "id": 10751,
+    "name": "Family"
+    },
+    {
+    "id": 14,
+    "name": "Fantasy"
+    },
+    {
+    "id": 36,
+    "name": "History"
+    },
+    {
+    "id": 27,
+    "name": "Horror"
+    },
+    {
+    "id": 10402,
+    "name": "Music"
+    },
+    {
+    "id": 9648,
+    "name": "Mystery"
+    },
+    {
+    "id": 10749,
+    "name": "Romance"
+    },
+    {
+    "id": 878,
+    "name": "Science Fiction"
+    },
+    {
+    "id": 10770,
+    "name": "TV Movie"
+    },
+    {
+    "id": 53,
+    "name": "Thriller"
+    },
+    {
+    "id": 10752,
+    "name": "War"
+    },
+    {
+    "id": 37,
+    "name": "Western"
+    }
+    ]
+
 function getApi(tmdbURL) {
   fetch(tmdbURL, {
     method: "GET",
   })
     .then(function (response) {
       if (response.ok) {
-        //console.log(response);
       } else {
         console.log(status);
       }
@@ -81,6 +159,7 @@ function connectApi (e) {
 
 connectApi();
 
+// not styling properly. Need to look over. May be issue with bulma
 function reccommendedMovies(data) {
   main.innerHTML = '';
 
@@ -105,17 +184,25 @@ function reccommendedMovies(data) {
   
 }
 
-var searchBar = document.querySelector('.input');
-
+var form = document.getElementById('form');
+var searchBar = document.getElementById('search');
+var searchURL = baseURL + '/search/movie?' + tmdbApiKey
+form.addEventListener('submit', (e) => {
+  event.preventDefault();
+  var searchCriteria = search.value
+  
+  if(searchCriteria) {
+    getApi(searchURL + '&query=' + searchCriteria)
+  } else {
+    getApi(tmbdURL);
+  }
+})
 
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {
   event.preventDefault();
   let genreDropdown = document.querySelector("#genreDropdown");
   genreDropdown.classList.toggle("is-active");
-
-
-  
 });
 
 var favoritedButton = document.querySelector("#favorites");

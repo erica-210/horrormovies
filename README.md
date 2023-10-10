@@ -1,7 +1,7 @@
 # horrormovies
 # Horror Movie Recommended Site
 
-A website meant to give top 10 recommedations for anyone who want to watch horror movies during spooky season, but doesn't know what to watch.
+This website serves the indecisive movie-watcher by recommending movies according the the user's preferences.
  
 ## Installation
 

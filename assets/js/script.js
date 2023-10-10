@@ -595,18 +595,19 @@ var moviesToWatch = document.getElementById('subtitle');
 
 favoritedButton.addEventListener("click", function pullFavorites(e) {
   event.preventDefault();
-  moviesToWatch.removeChild
+  
   var favoritesTitle = document.createElement("h1");
   var toBeWatched = document.createElement("div");
   favoritesTitle.textContent = "Favorited Movies";
   //toBeWatched.textContent = needs data input inconnection with favorited function
   favoritedSection.append(favoritesTitle);
   favoritedSection.append(toBeWatched);
-
+  
   favoritesTitle.setAttribute(
     "style",
-    "font-size:40px; text-align:center; outline: 2px solid rgb(243, 80, 16); padding:5px;"
+    "font-size:40px; margin: 40px; text-align:center; outline: 2px solid rgb(243, 80, 16); padding:5px; font-weight:bold;"
   );
+ moviesToWatch.replaceWith(favoritesTitle), moviesToWatch;
 },{once : true});
 
 

@@ -116,3 +116,18 @@ footer {
 .movie h3 {
     font-weight: bold;
 }
+
+#pumpkin img {
+    padding: 15px;
+    height: 90%;
+    width: 90%
+}
+
+#pumpkin {
+    text-align: center;
+    font-size: 30px;
+}
+
+#p2 {
+    color: var(--vibrant);
+}

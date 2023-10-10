@@ -169,6 +169,7 @@ function getApi(tmdbURL) {
      action = genres.filter((id, index) => index === 10 || index === 0);
      actionHorror.setAttribute = action;
      $( "#action" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(action);
     } else {
@@ -189,6 +190,7 @@ function getApi(tmdbURL) {
      adventure = genres.filter((id, index) => index === 10 || index === 1);
      adventureHorror.setAttribute = adventure;
      $( "#adventure" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(adventure);
     } else {
@@ -209,6 +211,7 @@ function getApi(tmdbURL) {
      animation = genres.filter((id, index) => index === 10 || index === 2);
      animationHorror.setAttribute = animation;
      $( "#animation" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(animation);
     } else {
@@ -229,6 +232,7 @@ function getApi(tmdbURL) {
      comedy = genres.filter((id, index) => index === 10 || index === 3);
      comedyHorror.setAttribute = comedy;
      $( "#comedy" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(comedy);
     } else {
@@ -249,6 +253,7 @@ function getApi(tmdbURL) {
      crime = genres.filter((id, index) => index === 10 || index === 4);
      crimeHorror.setAttribute = crime;
      $( "#crime" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(crime);
     } else {
@@ -269,6 +274,7 @@ function getApi(tmdbURL) {
      documentary = genres.filter((id, index) => index === 10 || index === 5);
      docuHorror.setAttribute = documentary;
      $( "#docu" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(documentary);
     } else {
@@ -289,6 +295,7 @@ function getApi(tmdbURL) {
      drama = genres.filter((id, index) => index === 10 || index === 6);
      dramaHorror.setAttribute = drama;
      $( "#drama" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(drama);
     } else {
@@ -309,6 +316,7 @@ function getApi(tmdbURL) {
      family = genres.filter((id, index) => index === 10 || index === 7);
      familyHorror.setAttribute = family;
      $( "#family" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(family);
     } else {
@@ -329,6 +337,7 @@ function getApi(tmdbURL) {
      fantasy = genres.filter((id, index) => index === 10 || index === 8);
      fantasyHorror.setAttribute = fantasy;
      $( "#fantasy" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(fantasy);
     } else {
@@ -349,6 +358,7 @@ function getApi(tmdbURL) {
      historical= genres.filter((id, index) => index === 10 || index === 9);
      historyHorror.setAttribute = historical;
      $( "#history" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(historical);
     } else {
@@ -369,6 +379,7 @@ function getApi(tmdbURL) {
      music = genres.filter((id, index) => index === 10 || index === 11);
      musicHorror.setAttribute = music;
      $( "#music" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(music);
     } else {
@@ -389,6 +400,7 @@ function getApi(tmdbURL) {
      mystery = genres.filter((id, index) => index === 10 || index === 12);
      mysteryHorror.setAttribute = mystery;
      $( "#mystery" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(mystery);
     } else {
@@ -409,6 +421,7 @@ function getApi(tmdbURL) {
      romance = genres.filter((id, index) => index === 10 || index === 13);
      romanceHorror.setAttribute = romance;
      $( "#romance" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(romance);
     } else {
@@ -429,6 +442,7 @@ function getApi(tmdbURL) {
      science = genres.filter((id, index) => index === 10 || index === 14);
      scienceHorror.setAttribute = science;
      $( "#science" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(science);
     } else {
@@ -449,6 +463,7 @@ function getApi(tmdbURL) {
      tv = genres.filter((id, index) => index === 10 || index === 15);
      tvHorror.setAttribute = tv;
      $( "#tv" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(tv);
     } else {
@@ -469,6 +484,7 @@ function getApi(tmdbURL) {
      thrill = genres.filter((id, index) => index === 10 || index === 16);
      thrillHorror.setAttribute = thrill;
      $( "#thrill" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(thrill);
     } else {
@@ -489,6 +505,7 @@ function getApi(tmdbURL) {
      war = genres.filter((id, index) => index === 10 || index === 17);
      warHorror.setAttribute = war;
      $( "#war" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(war);
     } else {
@@ -509,6 +526,7 @@ function getApi(tmdbURL) {
      western= genres.filter((id, index) => index === 10 || index === 18);
      westernHorror.setAttribute = western;
      $( "#western" ).on( "click", function() {
+      moviesToWatch.innerHTML = "Movies to Watch";
       if(selectedGenre.length >= 0){
         selectedGenre.push(western);
     } else {
@@ -601,19 +619,8 @@ var moviesToWatch = document.getElementById('subtitle');
 
 favoritedButton.addEventListener("click", function pullFavorites(e) {
   event.preventDefault();
-  
-  var favoritesTitle = document.createElement("h1");
-  var toBeWatched = document.createElement("div");
-  favoritesTitle.textContent = "Favorited Movies";
-  //toBeWatched.textContent = needs data input inconnection with favorited function
-  favoritedSection.append(favoritesTitle);
-  favoritedSection.append(toBeWatched);
-  
-  favoritesTitle.setAttribute(
-    "style",
-    "font-size:40px; margin: 40px; text-align:center; outline: 2px solid rgb(243, 80, 16); padding:5px; font-weight:bold;"
-  );
- moviesToWatch.replaceWith(favoritesTitle), moviesToWatch;
+  moviesToWatch.innerHTML = "Favorited Movies"
+
 },{once : true});
 
 

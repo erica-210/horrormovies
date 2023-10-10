@@ -1,5 +1,5 @@
 let startButton = document.querySelector("#start");
-
+//Declare variables, API keys, etc
 var omdbApiKey = "45d7bdd6";
 var tmdbApiKey = "api_key=96e06e8f584c29c1ea0c1fe465d02637";
 var baseURL = "https://api.themoviedb.org/3";
@@ -10,13 +10,14 @@ var IMG_URL = "https://image.tmdb.org/t/p/w500";
 var main = document.getElementById('movie-container');
 
 var letsBegin;
-
+//Extend the dayjs library with the relativeTime plugin. Set up the date format and method for calculating time between current date and Halloween.
 dayjs.extend(window.dayjs_plugin_relativeTime)
 
 var halloween = dayjs('2023-10-31').format('YYYY-MM-DD')
 var halloweenCountdown = dayjs().to(halloween, true);
 $('#countdown').text(halloweenCountdown);
 
+//Once document is loaded, this function will run and data is fetched from TMDb api
 $(document).ready(function () {
 function getApi(tmdbURL) {
   fetch(tmdbURL, {
@@ -30,6 +31,7 @@ function getApi(tmdbURL) {
       return response.json();
     })
 
+//Calls the reccommendedMovies function
     .then(function (data) {
       console.log(data.results);
       reccommendedMovies(data.results);
@@ -40,6 +42,7 @@ function getApi(tmdbURL) {
     });
 }
 
+//Array of the available genres
   var genres = [
     {
       "id": 28,
@@ -119,6 +122,7 @@ function getApi(tmdbURL) {
       }
       ]
 
+      //Defining variables and assigning them to the appropriate HTML id
   var dropdownMenu = document.getElementById('tags');
   var actionHorror = document.getElementById('action');
   var adventureHorror = document.getElementById('adventure');
@@ -140,8 +144,11 @@ function getApi(tmdbURL) {
   var westernHorror = document.getElementById('western');
 
   genreDefiner();
-
+//Filter and retrieve movies depending on user input, and repeat for each genre
+//Creates array which contains genres, which will be filtered depending on user input
   var selectedGenre = [];
+
+//THIS GENERAL IDEA REPEATS UNTIL LINE 535, SO NO COMMENTS SINCE IT WOULD BE REDUNDANT
   function genreDefiner() {
      action = genres.filter((id, index) => index === 10 || index === 0);
      actionHorror.setAttribute = action;
@@ -525,6 +532,7 @@ function getApi(tmdbURL) {
     console.log(war);
   }
  
+  //This lets the code specifically target movies by the Horror genre behind the scenes, so that results will always be fitting for Halloween
   function connectApi (e) {
     var tmbdURL =
       baseURL + byPopularity + tmdbApiKey + byGenre + '27';
@@ -532,13 +540,15 @@ function getApi(tmdbURL) {
   }
 
 connectApi();
-
+//This handles displaying the movies and which data will be presented
 function reccommendedMovies(data) {
   
   main.innerHTML = '';
 
   data.forEach(movie => {
     var {title, poster_path, release_date, vote_average} = movie;
+    
+    //Creates container for movies
     var movieE1 = document.createElement('div');
     movieE1.classList.add('movie');
     movieE1.innerHTML= 
@@ -554,9 +564,12 @@ function reccommendedMovies(data) {
     <button id="heart" class="button"><i class="fas fa-heart"></i></button>
     <button onclick="Toggle2()" id="trash" class="button"><i class="fa-solid fa-trash"></i></button>
     `
+
     main.appendChild(movieE1);  
    
   })
+
+  //Event listener for the heart feature on movies
   var heartBtn = document.getElementById('heart');
 heartBtn.addEventListener('click', function() {
   if (heartBtn.classList.contains("is-danger")) {
@@ -582,6 +595,7 @@ form.addEventListener('submit', (e) => {
   }
 })
 
+//Genre button and visibility toggle
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {
   event.preventDefault();

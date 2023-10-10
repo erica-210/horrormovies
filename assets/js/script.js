@@ -11,6 +11,12 @@ var main = document.getElementById('movie-container');
 
 var letsBegin;
 
+dayjs.extend(window.dayjs_plugin_relativeTime)
+
+var halloween = dayjs('2023-10-31').format('YYYY-MM-DD')
+var halloweenCountdown = dayjs().to(halloween, true);
+$('#countdown').text("halloween is in " + halloweenCountdown);
+
 $(document).ready(function () {
 //function getApi(omdbURL) {
   //fetch(omdbURL, {

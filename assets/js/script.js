@@ -164,6 +164,7 @@ function getApi(tmdbURL) {
       var actionURL = baseURL + movieList + tmdbApiKey + byGenre + '27,28'
       getApi(actionURL)
     } );
+    
      adventure = genres.filter((id, index) => index === 10 || index === 1);
      adventureHorror.setAttribute = adventure;
      $( "#adventure" ).on( "click", function() {

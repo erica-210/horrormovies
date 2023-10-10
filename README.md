@@ -20,7 +20,7 @@ Github Repository:
 https://github.com/erica-210/horrormovies
 
 
-![alt text]()
+![alt text](./assets/images/ezgif.com-video-to-gif%20(1).gif)
 
 ## Credits
 

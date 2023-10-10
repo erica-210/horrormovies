@@ -18,29 +18,6 @@ var halloweenCountdown = dayjs().to(halloween, true);
 $('#countdown').text(halloweenCountdown);
 
 $(document).ready(function () {
-//function getApi(omdbURL) {
-  //fetch(omdbURL, {
-  //  method: "GET",
- // })
-  //  .then(function (response) {
-   //   if (response.ok) {
-   //     console.log(response);
-   //   } else {
-    //    console.log(status);
-    //  }
-     // return response.json();
-   // })
-
-    //.then(function (data) {
-    //  console.log(data);
-
-    //})
-
-    //.catch(function (error) {
-     // alert("ERROR");
-    //});
-//}
-
 function getApi(tmdbURL) {
   fetch(tmdbURL, {
     method: "GET",
@@ -187,6 +164,7 @@ function getApi(tmdbURL) {
       var actionURL = baseURL + movieList + tmdbApiKey + byGenre + '27,28'
       getApi(actionURL)
     } );
+    
      adventure = genres.filter((id, index) => index === 10 || index === 1);
      adventureHorror.setAttribute = adventure;
      $( "#adventure" ).on( "click", function() {
@@ -548,10 +526,8 @@ function getApi(tmdbURL) {
   }
  
   function connectApi (e) {
-    //var omdbURL = "https://www.omdbapi.com/?i=tt3896198&apikey=45d7bdd6";
     var tmbdURL =
       baseURL + byPopularity + tmdbApiKey + byGenre + '27';
-   // getApi(omdbURL);
     getApi(tmbdURL);
   }
 

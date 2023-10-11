@@ -11,16 +11,13 @@ var main = document.getElementById('movie-container');
 
 var letsBegin;
 
-// allows for the coundown timer to work towards a certain date
 dayjs.extend(window.dayjs_plugin_relativeTime)
 
 var halloween = dayjs('2023-10-31').format('YYYY-MM-DD')
 var halloweenCountdown = dayjs().to(halloween, true);
 $('#countdown').text(halloweenCountdown);
 
-// the dcoument ready function allows everything to work at the same time
 $(document).ready(function () {
-  // this fetchs our api and recieves the data we can use
 function getApi(tmdbURL) {
   fetch(tmdbURL, {
     method: "GET",
@@ -35,7 +32,6 @@ function getApi(tmdbURL) {
 
     .then(function (data) {
       console.log(data.results);
-      // this allows for the movies data to actually show up
       reccommendedMovies(data.results);
     })
 
@@ -43,7 +39,7 @@ function getApi(tmdbURL) {
       alert("ERROR");
     });
 }
-// an array that holds the ids for the genres that connect to the api
+
   var genres = [
     {
       "id": 28,
@@ -143,12 +139,9 @@ function getApi(tmdbURL) {
   var warHorror = document.getElementById('war');
   var westernHorror = document.getElementById('western');
 
-  // calls the function for the subgenre filter
   genreDefiner();
 
   var selectedGenre = [];
-  // combines the horror genre with all other genres to create the specific subgenres
-  // contains click event for each subgenre and calls their specific functions
   function genreDefiner() {
      action = genres.filter((id, index) => index === 10 || index === 0);
      actionHorror.setAttribute = action;
@@ -532,7 +525,6 @@ function getApi(tmdbURL) {
     console.log(war);
   }
  
-  // connects the different parts of the api url and apikey to popular horror movies
   function connectApi (e) {
     var tmbdURL =
       baseURL + byPopularity + tmdbApiKey + byGenre + '27';
@@ -541,8 +533,6 @@ function getApi(tmdbURL) {
 
 connectApi();
 
-// styles the movies to watch page with a container so the movies have a place to display
-// pulls the specific data for each movie 
 function reccommendedMovies(data) {
   
   main.innerHTML = '';
@@ -567,7 +557,6 @@ function reccommendedMovies(data) {
     main.appendChild(movieE1);  
    
   })
-  // allows for favoites button to be clicked and turn red when a movie is favorited
   var heartBtn = document.getElementById('heart');
 heartBtn.addEventListener('click', function() {
   if (heartBtn.classList.contains("is-danger")) {
@@ -577,8 +566,8 @@ heartBtn.addEventListener('click', function() {
 });
 }
 
-// event listener for search button and makes searching by movie name possible
-// using api url, specific search query and api key
+
+
 var form = document.getElementById('form');
 var searchBar = document.getElementById('search');
 var searchURL = baseURL + '/search/movie?' + tmdbApiKey
@@ -593,7 +582,6 @@ form.addEventListener('submit', (e) => {
   }
 })
 
-// allows for drop down feature to open and show subgenres
 let genreButton = document.querySelector("#genreButton");
 genreButton.addEventListener("click", function (e) {
   event.preventDefault();
@@ -605,8 +593,6 @@ var favoritedButton = document.querySelector("#favorites");
 var favoritedSection = document.querySelector("#favorited");
 var moviesToWatch = document.getElementById('subtitle');
 
-// allows for favorite button to change to new section
-// changes title from movies to watch to favorite movies
 favoritedButton.addEventListener("click", function pullFavorites(e) {
   event.preventDefault();
   moviesToWatch.innerHTML = "Favorited Movies"
